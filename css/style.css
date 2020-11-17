@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Spartan';
+}
+
+
+.sliderimage{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cta{
+    border: none;
+    background-color: transparent;
+    font-family: 'Spartan';
+    font-weight: 700;
+}
+.slider-arrows{
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.sid-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sid1{
+    background-image: url("/assets/image/image-about-dark.jpg");
+}
+.sid2{
+    background-image: url("/assets/image/image-about-light.jpg");
+}
+
+/****************************************** REsponsiveness **********************************/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 350px) {
+
+    /******************************** navbar */
+    .transbar{
+        position: absolute;
+        top: 30px;
+        width: 100%;
+    }
+    .ham{
+        margin: 0 50px;
+        cursor: pointer;
+    }
+    .logo{
+        width: 50px;
+        margin-left: 30px;
+    }
+    .drop{
+        display: none;
+        position: absolute;
+        background:rgba(34, 32, 32, 0.445);
+        top: -30px;
+        width: 100%;
+        z-index: 1;
+        height: 800px;
+    }
+    .links{
+        background-color: white;
+        display: flex;
+        padding: 30px 12px;
+    }
+    .close{
+        font-size: 12px;
+        padding: 0;
+        margin: 0 40px 0 20px;
+    }
+    .links a{
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+        font-weight: 700;
+        margin: 0 15px;
+        text-transform: lowercase;
+    }
+    /******************************** Slider */
+    .slides{
+        flex-direction: column;
+    }
+    
+    .sliderimage{
+        height: 300px;
+    }
+            /************************** SliderInfo */
+    .img1{
+        background-image: url("/assets/image/mobile-image-hero-1.jpg");
+    }
+    .img2{
+        background-image: url("/assets/image/mobile-image-hero-2.jpg");
+    }
+    .img3{
+        background-image: url("/assets/image/mobile-image-hero-3.jpg");
+    }
+    .sliderstory{
+        padding: 50px;
+    }
+    .slide-title{
+        font-size: 22px;
+    }
+    .slide-story{
+        font-size: 12px;
+        line-height: 16px;
+    }
+            /*********************** CTA */
+    .cta{
+        margin-top: 20px;
+        letter-spacing: 10px;
+    }
+            /********************** SliderArrow */
+    .slider-arrows{
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 260px;
+    }
+    .slider-arrows span{
+        display: block;
+        width: 50%;
+        padding: 10px;
+    }
+    span img{
+        width: 10px;
+        height: 14px;
+        display: block;
+        margin: auto;
+    }
+    /* About */
+    .img{
+        padding: 50px;
+    }
+    .sid-img{
+        height: 100px;
+
+    }
+    .story{
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+@media only screen and (min-width: 475px) {
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .sliderimage{
+        height: 600px;
+    }
+    .slider-arrows{
+        top: 560px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .ham{
+        display: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        text-transform: lowercase;
+        margin: 0 11px;
+        padding: 0;
+        font-size: 14px;
+    }
+    .close{
+        display: none;
+    }
+    .slides{
+        flex-direction: row;
+        align-items: center;
+    }
+    .sliderimage{
+        width: 60%;
+    }
+    .slide-story{
+        width: 400px;
+        padding: 0;
+    }
+    .slider-arrows{
+        right: 38.3%;
+    }
+    .about{
+        display: flex;
+    }
+    .img{
+        width: 40%;
+    }
+    .sid-img{
+        width: 30%;
+        height: 200px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1365px) {
+    /******************************* nvbar */
+    .transbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 65px 50px;
+        vertical-align: middle;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        margin-right: 45px;
+        width: 50px;
+        height: 14px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        text-transform: lowercase;
+        margin: 0 11px;
+        padding: 0;
+        font-size: 14px;
+    }
+    /******************************* slider */
+    .slides{
+        flex-direction: row;
+        align-items: center;
+        margin: -20px auto;
+    }
+    .sliderimage{
+        height: 500px;
+        width: 60%;
+    }
+    .sliderstory{
+        width: 40%;
+        padding: 80px;
+    }
+            /**** slideInfo */
+    .img1{
+        background-image: url("/assets/image/desktop-image-hero-1.jpg");
+    }
+    .img2{
+        background-image: url("/assets/image/desktop-image-hero-2.jpg");
+    }
+    .img3{
+        background-image: url("/assets/image/desktop-image-hero-3.jpg");
+    }
+    .slide-title{
+        font-size: 45px;
+    }
+    .slide-story{
+        font-size: 14.8px;
+        line-height: 20px;
+    }
+            /**** CTA Button */
+    .cta{
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+            /**** Slider Arrow */
+    .slider-arrows{
+        width: 140px;
+        height: 50px;
+        position: absolute;
+        right: 37.3%;
+        top: 440px;
+    }
+    .slider-arrows span{
+        display: block;
+        width: 50%;
+        padding: 25px;
+    }
+    span img{
+        width: 10px;
+        height: 14px;
+        display: block;
+        margin: auto;
+    }
+    
+    /******************************* About */
+    .about{
+        display: flex;
+        align-items: center;
+        /* width: 1440px; */
+        margin: 10px auto;
+    }
+    .img{
+        width: 40%;
+        padding: 0 50px;
+    }
+    
+    .sid-img{
+        height: 400px;
+        width: 30%;
+    }
+    .title{
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    .story{
+        font-size: 14.8px;
+    }
+}
+@media only screen and (min-width: 1650px){
+    /* navbar */
+    body{
+        margin: 0;
+    }
+    .transbar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 80px 80px;
+        vertical-align: middle;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        margin-right: 20px;
+        width: 70px;
+        height: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        text-transform: lowercase;
+        padding: 20px;
+        margin: 0 30px;
+    }
+    /* slider */
+    .slider{
+        height: 800px;
+    }
+    .sliderimage{
+        width: 60%;
+        height: 800px;
+    }
+    .slides{
+        align-items: center;
+        margin-top: -50px;
+    }
+    .sliderstory{
+        width: 40%;
+        padding: 150px;
+    }
+            /* sliderInfo */
+    .slide-title{
+        font-size: 83px;
+    }
+    .slide-story{
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .cta{
+        border: none;
+        background-color: transparent;
+        letter-spacing: 24px;
+        text-transform: uppercase;
+        font-family: 'Spartan';
+        font-weight: 700;
+        font-size: 20px;
+    }
+            /* slidenav */
+    .slider-arrows{
+        width: 150px;
+        height: 80px;
+        position: absolute;
+        right: 41.18%;
+        top: 720px;
+    }
+    .slider-arrows span{
+        display: block;
+        width: 50%;
+        padding-left: 25px;
+    }
+    /* about */
+    .about{
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 20;
+        height: 500px;
+    }
+    .img{
+        width: 40%;
+        padding: 0 80px;
+    }
+    .sid-img{
+        width: 30%;
+    }
+    .title{
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    .story{
+        font-size: 24px;
+    }
+}

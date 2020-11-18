@@ -1,5 +1,5 @@
 let eachSlide = 1;
-
+  
 showSlide=(n)=>{
     let slide = $(".slides");
     if(n > slide.length){
@@ -15,8 +15,14 @@ showSlide=(n)=>{
     
     $("#slides" + num).css("display", "flex");
 }
-
-showSlide(eachSlide);
+let x = setInterval(function(){
+    eachSlide++
+    showSlide(eachSlide);
+    $(".slides").mouseenter(()=>{
+        clearInterval(x)
+    });
+    
+},5000);
 
 $("#next").click(()=>{
     console.log(eachSlide);
@@ -26,19 +32,12 @@ $("#prev").click(()=>{
     showSlide(eachSlide -= 1);
 });
 $(".ham").click(()=>{
-    $(".drop").css("display", "block")
+    $(".drop").css("display", "block");
 });
 $(".close").click(()=>{
-    $(".drop").css("display", "none")
+    $(".drop").css("display", "none");
 });
-setInterval(()=>{
-    var x = window.matchMedia("(min-width: 992px)")
-    if(x.matches){
-        $("#drops").removeAttr("class");
-        $("#links").removeAttr("class");
-    }
 
-},500);
 
 
 
